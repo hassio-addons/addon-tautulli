@@ -6,44 +6,35 @@ FROM ${BUILD_FROM}
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Sets working directory
-WORKDIR /app
+WORKDIR /opt
 
 # Setup base
 RUN \
   apk add --no-cache --virtual=build-dependencies \
-  apache2-utils=2.4.34-r0 \
-  autoconf=2.69-r2 \
-  automake=1.16.1-r0 \
-  g++=6.4.0-r8 \
-  gcc=6.4.0-r8 \
-  linux-headers=4.4.6-r2 \
-  make=4.2.1-r2 \
-  python2-dev=2.7.15-r1 \
-  tar=1.30-r0 && \
-  apk add --no-cache \
-  coreutils=8.29-r2 \
-  git=2.18.0-r0 \
-  py2-lxml=4.2.2-r0 \
-  py2-pip=10.0.1-r0 \
-  python2=2.7.15-r1 \
-  shadow=4.5-r0 \
-  nginx=1.14.0-r0 \
-  vnstat=1.18-r0 \
-  wget=1.19.5-r0 && \
-  pip install --no-cache-dir -U \
-  pip==18.0 && \
-  pip install --no-cache-dir -U \
-  plexapi==3.0.6 \
-  pycryptodomex==3.6.6 && \
-  groupmod -g 1000 users && \
-  useradd -u 911 -U -d /config -s /bin/false tautulli && \
-  usermod -G users tautulli && \
-  mkdir -p \
-  /app \
-  /defaults \
-    && git clone --branch v2.1.18 --depth=1 \
-        https://github.com/Tautulli/Tautulli.git /app
-  
+    g++=6.4.0-r8 \
+    gcc=6.4.0-r8 \
+    make=4.2.1-r2 \
+    python2-dev=2.7.15-r1 \
+    py2-pip=10.0.1-r0 \
+    libffi-dev=3.2.1-r4 \
+    libressl-dev=2.7.4-r0 \
+  && apk add --no-cache \
+    git=2.18.0-r0 \
+    python2=2.7.15-r1 \
+    wget=1.19.5-r0 \
+  && pip install --no-cache-dir -U \
+    pip==18.0 \
+  && pip install --no-cache-dir -U \
+    plexapi==3.0.6 \
+    pycryptodomex==3.6.6 \
+    crudini==0.9 \
+    PyOpenSSL==18.0.0 \
+  && git clone --branch "v2.1.18" --depth=1 \
+    https://github.com/Tautulli/Tautulli.git /opt \
+  && find /usr/lib/python2.7/ -type d -name tests -depth -exec rm -rf {} \; \
+  && find /usr/lib/python2.7/ -type d -name test -depth -exec rm -rf {} \; \
+  && find /usr/lib/python2.7/ -name __pycache__ -depth -exec rm -rf {} \;
+ 
 # TODO Move up
 ENV LANG en_US.utf8
 

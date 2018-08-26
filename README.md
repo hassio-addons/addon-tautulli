@@ -29,7 +29,7 @@ comparison to installing any other Hass.io add-on.
 1. Install the "Tautulli" add-on.
 1. Start the "Tautulli" add-on
 1. Check the logs of the "Tautulli" add-on to see if everything went well.
-1. Open the Tautulli website and folow the wizard to get it autorized with your Plex server.
+1. Click "OPEN WEB UI" to open the Tautulli website and folow the wizard to get it autorized with your Plex server.
 
 **NOTE**: Starting the add-on might take a couple of minutes (especially the
 first time starting the add-on).
@@ -217,7 +217,7 @@ our [GitHub Repository][repository].
 
 MIT License
 
-Copyright (c) 2018 Joakim Sørensen
+Copyright (c) 2018 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

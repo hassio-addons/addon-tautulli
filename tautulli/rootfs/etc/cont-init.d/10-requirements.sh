@@ -49,4 +49,3 @@ if hass.config.true 'ssl'; then
         hass.die 'The configured keyfile is not found'
     fi
 fi
-

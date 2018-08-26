@@ -6,16 +6,10 @@
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
 
-# If config.ini does not exist, create it.
-if ! hass.file_exists "/data/config.ini"; then
-  hass.log.info "Adding default configuration..."
-  cp /opt/config/config.ini /data/config.ini
-  chown tautulli:tautulli /data/config.ini
-fi
-
 # Start Tautulli
 hass.log.info "Starting Tautulli..."
 exec \
-  s6-setuidgid tautulli python /app/Tautulli.py \
+  python /opt/Tautulli.py \
   --datadir /data \
-  -p 17277
+  --nolaunch \
+  -p 8181

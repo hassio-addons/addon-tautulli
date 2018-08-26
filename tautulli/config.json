@@ -1,8 +1,8 @@
 {
   "name": "Tautulli",
-  "version": "dev1",
+  "version": "dev",
   "slug": "tautulli",
-  "description": "Monitoring and tracking tool for Plex Media Server.",
+  "description": "Monitoring and tracking tool for Plex Media Server",
   "url": "https://github.com/hassio-addons/addon-tautulli/tree/master/README.md",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:8181]",
   "startup": "services",
@@ -26,10 +26,9 @@
     "log_level": "info",
     "username": "",
     "password": "",
-    "ssl": false,
+    "ssl": true,
     "certfile": "fullchain.pem",
-    "keyfile": "privkey.pem",
-    "ipv6": false
+    "keyfile": "privkey.pem"
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
@@ -38,7 +37,6 @@
     "ssl": "bool",
     "certfile": "str",
     "keyfile": "str",
-    "ipv6": "bool",
     "i_like_to_be_pwned": "bool?",
     "leave_front_door_open": "bool?"
   },
