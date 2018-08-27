@@ -20,6 +20,7 @@
     "8181/tcp": 8181
   },
   "map": [
+    "config",
     "ssl"
   ],
   "options": {
