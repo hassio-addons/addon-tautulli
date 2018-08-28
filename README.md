@@ -18,7 +18,13 @@ Monitor and get statistics from your Plex server.
 
 ## About
 
-Tautulli is an application that you can run alongside your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.
+Tautulli is an application that you can run alongside your Plex Media Server
+to monitor activity, and track various statistics.
+Most importantly, these statistics include what has been watched,
+who watched it, when and where they watched it, and how it was watched.
+All statistics are presented in a nice and clean interface
+with many tables and graphs,
+which makes it easy to brag about your server to everyone else.
 
 ## Installation
 
@@ -29,7 +35,7 @@ comparison to installing any other Hass.io add-on.
 1. Install the "Tautulli" add-on.
 1. Start the "Tautulli" add-on
 1. Check the logs of the "Tautulli" add-on to see if everything went well.
-1. Click "OPEN WEB UI" to open the Tautulli website and folow the wizard to get it autorized with your Plex server.
+1. Click "OPEN WEB UI" to open the Tautulli website and follow the wizard.
 
 **NOTE**: Starting the add-on might take a couple of minutes (especially the
 first time starting the add-on).
@@ -141,7 +147,6 @@ username and password empty.
 
 **Note**: _We STRONGLY suggest, not to use this, even if this add-on is
 only exposed to your internal network. USE AT YOUR OWN RISK!_
-
 
 ## Embedding into Home Assistant
 

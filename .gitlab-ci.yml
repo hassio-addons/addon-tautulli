@@ -426,3 +426,4 @@ publish:edge:
     - master
   environment:
     name: edge
+
