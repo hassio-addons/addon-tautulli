@@ -35,9 +35,6 @@ RUN \
   && find /usr/lib/python2.7/ -type d -name tests -depth -exec rm -rf {} \; \
   && find /usr/lib/python2.7/ -type d -name test -depth -exec rm -rf {} \; \
   && find /usr/lib/python2.7/ -name __pycache__ -depth -exec rm -rf {} \;
- 
-# TODO Move up
-ENV LANG en_US.utf8
 
 # Copy root filesystem
 COPY rootfs /
