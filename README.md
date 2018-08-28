@@ -148,7 +148,6 @@ username and password empty.
 **Note**: _We STRONGLY suggest, not to use this, even if this add-on is
 only exposed to your internal network. USE AT YOUR OWN RISK!_
 
-
 ## Embedding into Home Assistant
 
 It is possible to embed Tautulli directly into Home Assistant, allowing you to
