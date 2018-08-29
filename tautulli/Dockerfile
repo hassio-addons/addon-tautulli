@@ -2,6 +2,9 @@ ARG BUILD_FROM=hassioaddons/base:2.1.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
+# Set env
+ENV TAUTULLI_VERSION 'v2.1.18'
+
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -29,7 +32,7 @@ RUN \
     pycryptodomex==3.6.6 \
     crudini==0.9 \
     PyOpenSSL==18.0.0 \
-  && git clone --branch "v2.1.18" --depth=1 \
+  && git clone --branch $TAUTULLI_VERSION --depth=1 \
     https://github.com/Tautulli/Tautulli.git /opt \
   && apk del --purge .build-dependencies \
   && find /usr/lib/python2.7/ -type d -name tests -depth -exec rm -rf {} \; \

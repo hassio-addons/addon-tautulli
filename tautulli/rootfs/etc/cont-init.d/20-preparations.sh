@@ -7,16 +7,15 @@
 source /usr/lib/hassio-addons/base.sh
 
 CONFIG=/data/config.ini
+ADDON=/data/addon.ini
 
 # If config.ini does not exist, create it.
 if ! hass.file_exists "/data/config.ini"; then
     hass.log.info "Creating default configuration..."
-    crudini --set "$CONFIG" General week_start_monday 1
-    crudini --set "$CONFIG" General update_show_changelog 0
     crudini --set "$CONFIG" General first_run_complete 0
-    crudini --set "$CONFIG" General check_github 0
-    crudini --set "$CONFIG" General check_github_on_startup 0
+    crudini --set "$CONFIG" General update_show_changelog 0
     crudini --set "$CONFIG" Advanced system_analytics 0
+    crudini --set "$ADDON" Addon version "$TAUTULLI_VERSION"
 fi
 
 hass.log.info "Updating running configuration..."
@@ -24,6 +23,21 @@ hass.log.info "Updating running configuration..."
 # Temporrary changing config.ini to be valid during additions
 ## This has to be done because Tautulli added a ini header with [[header]]
 sed -i "s/\\[\\[get_file_sizes_hold\\]\\]/\\[get_file_sizes_hold\\]/" "$CONFIG"
+
+# Set spesific config if an upgrade
+CURRENT_VERSION=$(crudini --get "$ADDON" Addon version)
+if [ "$CURRENT_VERSION" != "$TAUTULLI_VERSION" ]; then
+    hass.log.debug "This is an upgrade..."
+    crudini --set "$CONFIG" General update_show_changelog 1
+else
+    hass.log.debug "This is not an upgrade..."
+    crudini --set "$CONFIG" General update_show_changelog 0
+fi
+
+# Ensure config
+crudini --set "$ADDON" Addon version "$TAUTULLI_VERSION"
+crudini --set "$CONFIG" General check_github 0
+crudini --set "$CONFIG" General check_github_on_startup 0
 
 # Update SSL info in configuration
 if hass.config.true 'ssl'; then
