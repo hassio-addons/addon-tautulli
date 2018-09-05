@@ -8,4 +8,4 @@
 +                            <li><a href="https://buymeacoffee.com/ludeeus" target="_blank"><i class="fa fa-coffee"></i> Buy Me A Coffee :)</a></li>
                              <li role="separator" class="divider"></li>
                              % if plexpy.CONFIG.CHECK_GITHUB:
-                             <li><a href="#" id="nav-update"><i class="fa fa-fw fa-arrow-circle-up"></i> Check for Updates</a></li>
+                             <li><a href="#" id="nav-update"><i class="fa fa-fw fa-arrow-alt-circle-up"></i> Check for Updates</a></li>
