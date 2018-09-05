@@ -25,6 +25,9 @@ hass.log.info "Updating running configuration..."
 sed -i "s/\\[\\[get_file_sizes_hold\\]\\]/\\[get_file_sizes_hold\\]/" "$CONFIG"
 
 # Set spesific config if an upgrade
+if ! hass.file_exists "/data/addon.ini"; then
+    crudini --set "$ADDON" Addon version "0"
+fi
 CURRENT_VERSION=$(crudini --get "$ADDON" Addon version)
 if [ "$CURRENT_VERSION" != "$TAUTULLI_VERSION" ]; then
     hass.log.debug "This is an upgrade..."
