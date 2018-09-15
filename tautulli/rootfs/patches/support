@@ -29,10 +29,10 @@
 +	    <td>Add-on Support:</td>
 +	    <td>
 +           <a class="no-highlight" href="https://discord.me/hassioaddons" target="_blank">Community Hass.io Add-ons Discord Server</a> |
-+           <a class="no-highlight" href="https://github.com/hassio-addons/addon-tautulli/issues" target="_blank">GitHub issues for this add-on</a> | 
-+           <a class="no-highlight" href="https://community.home-assistant.io" target="_blank">Home-Assistant forum</a> 
++           <a class="no-highlight" href="https://github.com/hassio-addons/addon-tautulli/issues" target="_blank">GitHub issues for this add-on</a> |
++           <a class="no-highlight" href="https://community.home-assistant.io" target="_blank">Home Assistant forum</a>
 +	    </td>
 +	</tr>
      </tbody>
  </table>
- 
+

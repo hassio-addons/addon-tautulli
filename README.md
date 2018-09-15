@@ -93,11 +93,10 @@ you are troubleshooting.
 
 ### Option: `username`
 
-Username for authenticating with the Tautulli interface. Leaving the username
-field empty, will disable the authentication mechanism entirely.
+Username for authenticating with the Tautulli interface.
 
 Setting a username/password can be added as an extra line of defense,
-to prevent users of using your installation for themselves.
+to prevent users from using your installation for themselves.
 
 This option is HIGHLY recommended in case you expose this add-on to the outside
 world.
@@ -142,7 +141,7 @@ using this option! USE AT YOUR OWN RISK!_
 ### Option: `leave_front_door_open`
 
 Adding this option to the add-on configuration allows you to disable
-authentication on the Web Terminal by setting it to `true` and leaving the
+authentication on the add-on by setting it to `true` and leaving the
 username and password empty.
 
 **Note**: _We STRONGLY suggest, not to use this, even if this add-on is
