@@ -160,7 +160,7 @@ Example configuration:
 panel_iframe:
   tautulli:
     title: Tautulli
-    icon: mdi:tautulli
+    icon: mdi:filmstrip
     url: http://addres.to.your.hass.io:8181
 ```
 
