@@ -16,6 +16,8 @@
 
 Monitor and get statistics from your Plex server.
 
+![Screenshot][screenshot]
+
 ## About
 
 Tautulli is an application that you can run alongside your Plex Media Server
@@ -277,3 +279,4 @@ SOFTWARE.
 [releases]: https://github.com/hassio-addons/addon-tautulli/releases
 [repository]: https://github.com/hassio-addons/repository
 [semver]: http://semver.org/spec/v2.0.0.htm
+[screenshot]: https://github.com/hassio-addons/addon-tautulli/raw/master/images/screenshot.png
