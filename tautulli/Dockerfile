@@ -14,8 +14,8 @@ WORKDIR /opt
 # Setup base
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    g++=6.4.0-r8 \
-    gcc=6.4.0-r8 \
+    g++=6.4.0-r9 \
+    gcc=6.4.0-r9 \
     make=4.2.1-r2 \
     python2-dev=2.7.15-r1 \
     libffi-dev=3.2.1-r4 \
