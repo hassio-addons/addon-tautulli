@@ -166,6 +166,17 @@ panel_iframe:
     url: http://addres.to.your.hass.io:8181
 ```
 
+## Use an existing database
+
+**NB!: This is considered advanced usage.**
+
+If you want to import an existing Tautulli database to this addon, you first
+need to extract the `tautulli.db` file from your existing installation.
+Place this file in this directory `/share/tautulli`, you can use samba,
+Cloud9 or any other method to move it there.
+You need to restart the add-on for it to start using this database.
+_if the directory `/share/tautulli` does not exist you need to create it._
+
 ## Changelog & Releases
 
 This repository keeps a change log using [GitHub's releases][releases]

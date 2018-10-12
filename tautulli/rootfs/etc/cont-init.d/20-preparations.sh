@@ -6,8 +6,10 @@
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
 
-CONFIG=/data/config.ini
-ADDON=/data/addon.ini
+readonly ADDON=/data/addon.ini
+readonly CONFIG=/data/config.ini
+readonly DATABASE=/share/tautulli/tautulli.db
+readonly SHARE=/share/tautulli
 
 # If config.ini does not exist, create it.
 if ! hass.file_exists "/data/config.ini"; then
@@ -71,3 +73,14 @@ fi
 # Changing config.ini back.
 ## This has to be done because Tautulli added a ini header with [[header]]
 sed -i "s/\\[get_file_sizes_hold\\]/\\[\\[get_file_sizes_hold\\]\\]/" "$CONFIG"
+
+# Create /share/tautulli if it does not exist.
+if ! hass.directory_exists "$SHARE"; then
+    mkdir "$SHARE"
+fi
+
+# Use databasefile from /share/tautulli if it exist.
+if hass.file_exists "$DATABASE"; then
+    hass.log.info "Using database from $DATABASE"
+    ln -sf "$DATABASE" /data/tautulli.db
+fi

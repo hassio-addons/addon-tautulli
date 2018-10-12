@@ -22,7 +22,8 @@
   },
   "map": [
     "config",
-    "ssl"
+    "ssl",
+    "share:rw"
   ],
   "options": {
     "log_level": "info",
