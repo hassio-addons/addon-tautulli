@@ -22,7 +22,7 @@ RUN \
     libressl-dev=2.7.4-r0 \
   \
   && apk add --no-cache \
-    git=2.18.0-r0 \
+    git=2.18.1-r0 \
     python2=2.7.15-r1 \
     py2-pip=10.0.1-r0 \
     wget=1.19.5-r0 \
