@@ -30,7 +30,7 @@ RUN \
   && pip install --no-cache-dir -U \
     pip==18.0 \
   && pip install --no-cache-dir -U \
-    plexapi==3.0.6 \
+    plexapi==3.1.0 \
     pycryptodomex==3.6.6 \
     crudini==0.9 \
     PyOpenSSL==18.0.0 \
