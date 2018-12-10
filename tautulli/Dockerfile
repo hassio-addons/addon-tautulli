@@ -28,7 +28,7 @@ RUN \
     wget=1.19.5-r0 \
   \
   && pip install --no-cache-dir -U \
-    pip==18.0 \
+    pip==18.1 \
   && pip install --no-cache-dir -U \
     plexapi==3.1.0 \
     pycryptodomex==3.7.2 \
