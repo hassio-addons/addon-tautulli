@@ -1,26 +1,5 @@
 --- /opt/data/interfaces/default/configuration_table.html
 +++ /opt/data/interfaces/default/configuration_table.html
-@@ -54,20 +54,6 @@
-             <td>${plexpy.CONFIG.NEWSLETTER_DIR}</td>
-         </tr>
-         <tr>
--            <td>GeoLite2 Database:</td>
--            % if plexpy.CONFIG.GEOIP_DB:
--            <td>${plexpy.CONFIG.GEOIP_DB} | <a class="no-highlight" href="#" id="reinstall_geoip_db">Reinstall / Update</a> | <a class="no-highlight" href="#" id="uninstall_geoip_db">Uninstall</a></td>
--            % else:
--            <td><a class="no-highlight" href="#" id="install_geoip_db">Click here to install the GeoLite2 database.</a></td>
--            % endif
--        </tr>
--        % if plexpy.ARGS:
--        <tr>
--            <td>Arguments:</td>
--            <td>${plexpy.ARGS}</td>
--        </tr>
--        % endif
--        <tr>
-             <td>Platform:</td>
-             <td>${common.PLATFORM} ${common.PLATFORM_RELEASE} (${common.PLATFORM_VERSION + (' - {}'.format(common.PLATFORM_LINUX_DISTRO) if common.PLATFORM_LINUX_DISTRO else '')})</td>
-         </tr>
 @@ -93,6 +79,14 @@
                  <a class="no-highlight support-modal-link" href="${anon_url('https://forums.plex.tv/t/tautulli-monitor-your-plex-media-server/225242')}" target="_blank">Plex Forums</a>
              </td>
