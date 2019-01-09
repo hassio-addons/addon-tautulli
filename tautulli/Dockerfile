@@ -25,7 +25,7 @@ RUN \
     git=2.18.1-r0 \
     python2=2.7.15-r1 \
     py2-pip=10.0.1-r0 \
-    wget=1.19.5-r0 \
+    wget=1.20.1-r0 \
   \
   && pip install --no-cache-dir -U \
     pip==18.1 \
