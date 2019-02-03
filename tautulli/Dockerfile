@@ -33,7 +33,7 @@ RUN \
     plexapi==3.1.0 \
     pycryptodomex==3.7.2 \
     crudini==0.9 \
-    PyOpenSSL==18.0.0 \
+    PyOpenSSL==19.0.0 \
   \
   && git clone --branch $TAUTULLI_VERSION --depth=1 \
     https://github.com/Tautulli/Tautulli.git /opt \
