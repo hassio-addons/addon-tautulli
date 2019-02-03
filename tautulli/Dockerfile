@@ -31,7 +31,7 @@ RUN \
     pip==18.1 \
   && pip install --no-cache-dir -U \
     plexapi==3.1.0 \
-    pycryptodomex==3.7.2 \
+    pycryptodomex==3.7.3 \
     crudini==0.9 \
     PyOpenSSL==18.0.0 \
   \
