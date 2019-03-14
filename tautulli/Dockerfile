@@ -3,7 +3,7 @@ ARG BUILD_FROM=hassioaddons/base:2.3.2
 FROM ${BUILD_FROM}
 
 # Set env
-ENV TAUTULLI_VERSION 'v2.1.26'
+ENV TAUTULLI_VERSION 'v2.1.28'
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
