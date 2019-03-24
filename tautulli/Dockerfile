@@ -14,21 +14,19 @@ WORKDIR /opt
 # Setup base
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    g++=6.4.0-r9 \
-    gcc=6.4.0-r9 \
+    g++=8.2.0-r2 \
+    gcc=8.2.0-r2 \
     make=4.2.1-r2 \
-    python2-dev=2.7.15-r1 \
-    libffi-dev=3.2.1-r4 \
+    python2-dev=2.7.15-r3 \
+    libffi-dev=3.2.1-r6 \
     libressl-dev=2.7.5-r0 \
   \
   && apk add --no-cache \
-    git=2.18.1-r0 \
-    python2=2.7.15-r1 \
-    py2-pip=10.0.1-r0 \
+    git=2.20.1-r0 \
+    python2=2.7.15-r3 \
+    py2-pip=18.1-r0 \
     wget=1.20.1-r0 \
   \
-  && pip install --no-cache-dir -U \
-    pip==19.0.3 \
   && pip install --no-cache-dir -U \
     plexapi==3.1.0 \
     pycryptodomex==3.8.0 \
