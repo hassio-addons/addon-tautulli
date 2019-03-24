@@ -1,13 +1,11 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Tautulli
 # Runs Tautulli
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
 
 # Start Tautulli
-hass.log.info "Starting Tautulli..."
+bashio::log.info "Starting Tautulli..."
 exec \
   python /opt/Tautulli.py \
   --datadir /data \
