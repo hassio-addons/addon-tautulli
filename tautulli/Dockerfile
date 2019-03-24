@@ -11,6 +11,9 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Sets working directory
 WORKDIR /opt
 
+# Copy Python requirements file
+COPY requirements.txt /tmp/
+
 # Setup base
 RUN \
   apk add --no-cache --virtual .build-dependencies \
@@ -28,15 +31,13 @@ RUN \
     wget=1.20.1-r0 \
     py-openssl=18.0.0-r0 \
   \
-  && pip install --no-cache-dir -U \
-    plexapi==3.1.0 \
-    pycryptodomex==3.8.0 \
-    crudini==0.9 \
+  && pip install --no-cache-dir -U -r /tmp/requirements.txt \
   \
   && git clone --branch $TAUTULLI_VERSION --depth=1 \
     https://github.com/Tautulli/Tautulli.git /opt \
   && apk del --purge .build-dependencies \
   \
+  && rm -f -r /tmp/* \
   && find /usr/lib/python2.7/ -type d -name tests -depth -exec rm -rf {} \; \
   && find /usr/lib/python2.7/ -type d -name test -depth -exec rm -rf {} \; \
   && find /usr/lib/python2.7/ -name __pycache__ -depth -exec rm -rf {} \;
