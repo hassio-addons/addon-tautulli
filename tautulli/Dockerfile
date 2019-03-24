@@ -21,7 +21,7 @@ RUN \
     gcc=8.2.0-r2 \
     make=4.2.1-r2 \
     python2-dev=2.7.15-r3 \
-    libffi-dev=3.2.1-r6 \
+    libffi-dev=3.2.1-r4 \
     libressl-dev=2.7.5-r0 \
   \
   && apk add --no-cache \
