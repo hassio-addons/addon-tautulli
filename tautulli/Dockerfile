@@ -26,12 +26,12 @@ RUN \
     python2=2.7.15-r3 \
     py2-pip=18.1-r0 \
     wget=1.20.1-r0 \
+    py-openssl=18.0.0-r0 \
   \
   && pip install --no-cache-dir -U \
     plexapi==3.1.0 \
     pycryptodomex==3.8.0 \
     crudini==0.9 \
-    PyOpenSSL==19.0.0 \
   \
   && git clone --branch $TAUTULLI_VERSION --depth=1 \
     https://github.com/Tautulli/Tautulli.git /opt \
