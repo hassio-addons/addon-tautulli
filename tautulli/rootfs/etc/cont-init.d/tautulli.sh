@@ -3,11 +3,25 @@
 # Community Hass.io Add-ons: Tautulli
 # Preparing configuration for Tautulli
 # ==============================================================================
-
 readonly ADDON=/data/addon.ini
 readonly CONFIG=/data/config.ini
 readonly DATABASE=/share/tautulli/tautulli.db
 readonly SHARE=/share/tautulli
+
+# Require username / password
+if ! bashio::config.true 'leave_front_door_open'; then
+    bashio::config.require.username;
+    bashio::config.require.password;
+fi
+
+# Require a secure password
+if bashio::config.has_value 'password' \
+    && ! bashio::config.true 'i_like_to_be_pwned'; then
+    bashio::config.require.safe_password
+fi
+
+# Check SSL cerrificate
+bashio::config.require.ssl
 
 # If config.ini does not exist, create it.
 if ! bashio::fs.file_exists "$CONFIG"; then
@@ -82,3 +96,6 @@ if bashio::fs.file_exists "$DATABASE"; then
     bashio::log.info "Using database from $DATABASE"
     ln -sf "$DATABASE" /data/tautulli.db
 fi
+
+# Adds add-on support information in the settings of Tautulli
+patch /opt/data/interfaces/default/configuration_table.html /patches/support

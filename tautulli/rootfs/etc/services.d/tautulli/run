@@ -3,11 +3,9 @@
 # Community Hass.io Add-ons: Tautulli
 # Runs Tautulli
 # ==============================================================================
-
-# Start Tautulli
 bashio::log.info "Starting Tautulli..."
 exec \
   python /opt/Tautulli.py \
-  --datadir /data \
-  --nolaunch \
-  -p 8181
+    --datadir /data \
+    --nolaunch \
+    -p 8181
