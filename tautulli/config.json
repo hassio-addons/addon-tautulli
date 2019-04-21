@@ -27,7 +27,6 @@
     "share:rw"
   ],
   "options": {
-    "log_level": "info",
     "username": "",
     "password": "",
     "ssl": true,
@@ -35,7 +34,7 @@
     "keyfile": "privkey.pem"
   },
   "schema": {
-    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
     "username": "str",
     "password": "str",
     "ssl": "bool",
