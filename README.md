@@ -123,10 +123,6 @@ The private key file to use for SSL.
 
 **Note**: _The file MUST be stored in `/ssl/`, which is the default for Hass.io_
 
-### Option: `ipv6`
-
-Set this option too `false` to disable IPv6 support.
-
 ### Option: `i_like_to_be_pwned`
 
 Adding this option to the add-on configuration allows to you bypass the
