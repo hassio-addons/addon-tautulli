@@ -19,6 +19,9 @@
   "ports": {
     "8181/tcp": 8181
   },
+  "ports_description": {
+    "8181/tcp": "Tautulli web interface"
+  },
   "map": [
     "config",
     "ssl",
