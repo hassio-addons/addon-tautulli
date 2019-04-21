@@ -4,6 +4,12 @@
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports i386 Architecture][i386-shield]
+
 [![GitLab CI][gitlabci-shield]][gitlabci]
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
@@ -43,16 +49,6 @@ first time starting the add-on).
 
 **NOTE**: Do not add this repository to Hass.io, please use:
 `https://github.com/hassio-addons/repository`.
-
-## Docker status
-
-![Supports armhf Architecture][armhf-shield]
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-![Supports i386 Architecture][i386-shield]
-
-[![Docker Layers][layers-shield]][microbadger]
-[![Docker Pulls][pulls-shield]][dockerhub]
 
 ## Configuration
 
@@ -256,6 +252,7 @@ SOFTWARE.
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
 [buymeacoffee]: https://www.buymeacoffee.com/ludeeus
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-tautulli.svg
@@ -267,22 +264,20 @@ SOFTWARE.
 [dockerhub]: https://hub.docker.com/r/hassioaddons/tautulli
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/t/community-hass-io-add-on-tautulli/68745?u=ludeeus
-[ludeeus]: https://github.com/ludeeus
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-tautulli/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-tautulli/pipelines
 [home-assistant]: https://home-assistant.io
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-tautulli/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/tautulli.svg
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-tautulli.svg
+[ludeeus]: https://github.com/ludeeus
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2019.svg
 [microbadger]: https://microbadger.com/images/hassioaddons/tautulli
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
-[pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/tautulli.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-tautulli.svg
 [releases]: https://github.com/hassio-addons/addon-tautulli/releases
 [repository]: https://github.com/hassio-addons/repository
-[semver]: http://semver.org/spec/v2.0.0.htm
 [screenshot]: https://github.com/hassio-addons/addon-tautulli/raw/master/images/screenshot.png
+[semver]: http://semver.org/spec/v2.0.0.htm
