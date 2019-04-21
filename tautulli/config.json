@@ -16,8 +16,6 @@
   "boot": "auto",
   "hassio_api": true,
   "hassio_role": "default",
-  "homeassistant_api": false,
-  "host_network": false,
   "ports": {
     "8181/tcp": 8181
   },
