@@ -63,8 +63,7 @@ Example add-on configuration:
   "password": "Supercalifragilisticexpialidocious",
   "ssl": true,
   "certfile": "fullchain.pem",
-  "keyfile": "privkey.pem",
-  "ipv6": false
+  "keyfile": "privkey.pem"
 }
 ```
 
