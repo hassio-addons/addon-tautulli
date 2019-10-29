@@ -144,7 +144,7 @@ only exposed to your internal network. USE AT YOUR OWN RISK!_
 It is possible to embed Tautulli directly into Home Assistant, allowing you to
 access your Tautulli through the Home Assistant frontend.
 
-Home Assistant provides the `panel_iframe` component, for these purposes.
+Home Assistant provides the `panel_iframe` integration, for these purposes.
 
 Example configuration:
 
