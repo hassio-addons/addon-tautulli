@@ -1,3 +1,3 @@
-plexapi==3.1.0
+plexapi==3.2.0
 pycryptodomex==3.9.1
 crudini==0.9
