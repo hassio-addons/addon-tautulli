@@ -23,7 +23,6 @@
     "8181/tcp": "Tautulli web interface"
   },
   "map": [
-    "config",
     "ssl",
     "share:rw"
   ],
