@@ -17,8 +17,8 @@ COPY requirements.txt /tmp/
 # Setup base
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    g++=8.3.0-r0 \
-    gcc=8.3.0-r0 \
+    g++=9.2.0-r3 \
+    gcc=9.2.0-r3 \
     make=4.2.1-r2 \
     python2-dev=2.7.16-r1 \
     libffi-dev=3.2.1-r6 \
