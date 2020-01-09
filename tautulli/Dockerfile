@@ -22,7 +22,7 @@ RUN \
     make=4.2.1-r2 \
     python2-dev=2.7.16-r3 \
     libffi-dev=3.2.1-r6 \
-    libressl-dev=2.7.5-r0 \
+    libressl-dev=3.0.2-r0 \
   \
   && apk add --no-cache \
     git=2.22.0-r0 \
