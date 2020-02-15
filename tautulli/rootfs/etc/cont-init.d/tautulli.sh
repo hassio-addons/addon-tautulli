@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: Tautulli
+# Home Assistant Community Add-on: Tautulli
 # Preparing configuration for Tautulli
 # ==============================================================================
 readonly ADDON=/data/addon.ini
