@@ -52,15 +52,13 @@ first time starting the add-on).
 
 Example add-on configuration:
 
-```json
-{
-  "log_level": "info",
-  "username": "MarryPoppins",
-  "password": "Supercalifragilisticexpialidocious",
-  "ssl": true,
-  "certfile": "fullchain.pem",
-  "keyfile": "privkey.pem"
-}
+```yaml
+log_level: info
+username: MarryPoppins
+password: Supercalifragilisticexpialidocious
+ssl: true
+certfile: fullchain.pem
+keyfile: privkey.pem
 ```
 
 **Note**: _This is just an example, don't copy and past it! Create your own!_
