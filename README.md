@@ -253,7 +253,7 @@ SOFTWARE.
 [discord]: https://discord.me/hassioaddons
 [dockerhub]: https://hub.docker.com/r/hassioaddons/tautulli
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/t/community-hass-io-add-on-tautulli/68745?u=ludeeus
+[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-tautulli/68745?u=ludeeus
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-tautulli/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-tautulli/pipelines
 [home-assistant]: https://home-assistant.io
