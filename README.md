@@ -148,7 +148,7 @@ panel_iframe:
   tautulli:
     title: Tautulli
     icon: mdi:filmstrip
-    url: http://addres.to.your.hass.io:8181
+    url: http://addres.to.your.home.assistant:8181
 ```
 
 ## Use an existing database
