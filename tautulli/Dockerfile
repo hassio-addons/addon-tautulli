@@ -19,17 +19,17 @@ RUN \
   apk add --no-cache --virtual .build-dependencies \
     g++=9.2.0-r3 \
     gcc=9.2.0-r3 \
-    make=4.2.1-r2 \
-    python2-dev=2.7.16-r3 \
     libffi-dev=3.2.1-r6 \
     libressl-dev=3.0.2-r0 \
+    make=4.2.1-r2 \
+    python2-dev=2.7.16-r3 \
   \
   && apk add --no-cache \
     git=2.24.1-r0 \
-    python2=2.7.16-r3 \
+    libressl=3.0.2-r0 \
     py2-pip=18.1-r0 \
+    python2=2.7.16-r3 \
     wget=1.20.3-r0 \
-    py-openssl=19.1.0-r0 \
   \
   && pip install --no-cache-dir -U -r /tmp/requirements.txt \
   \
