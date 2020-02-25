@@ -35,7 +35,7 @@ RUN \
   \
   && git clone --branch $TAUTULLI_VERSION --depth=1 \
     https://github.com/Tautulli/Tautulli.git /opt \
-  && apk del --purge .build-dependencies \
+  && apk del --no-cache --purge .build-dependencies \
   \
   && rm -f -r /tmp/* \
   && find /usr/lib/python2.7/ -type d -name tests -depth -exec rm -rf {} \; \
