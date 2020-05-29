@@ -54,17 +54,19 @@ ARG BUILD_VERSION
 # Labels
 LABEL \
     io.hass.name="Tautulli" \
-    io.hass.description="Monitoring and tracking tool for Plex Media Server." \
+    io.hass.description="Monitoring and tracking tool for Plex Media Server" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
     maintainer="Joakim Sørensen @ludeeus <ludeeus@gmail.com>" \
-    org.label-schema.description="Monitoring and tracking tool for Plex Media Server." \
-    org.label-schema.build-date=${BUILD_DATE} \
-    org.label-schema.name="Tautulli" \
-    org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://community.home-assistant.io/t/home-assistant-community-add-on-tautulli/68745?u=ludeeus" \
-    org.label-schema.usage="https://github.com/hassio-addons/addon-tautulli/tree/master/README.md" \
-    org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/hassio-addons/addon-tautulli" \
-    org.label-schema.vendor="Home Assistant Community Add-ons"
+    org.opencontainers.image.title="Tautulli" \
+    org.opencontainers.image.description="Monitoring and tracking tool for Plex Media Server" \
+    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
+    org.opencontainers.image.authors="Joakim Sørensen @ludeeus <ludeeus@gmail.com>" \
+    org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.url="https://addons.community" \
+    org.opencontainers.image.source="https://github.com/hassio-addons/addon-tautulli" \
+    org.opencontainers.image.documentation="https://github.com/hassio-addons/addon-tautulli/blob/master/README.md" \
+    org.opencontainers.image.created=${BUILD_DATE} \
+    org.opencontainers.image.revision=${BUILD_REF} \
+    org.opencontainers.image.version=${BUILD_VERSION}
