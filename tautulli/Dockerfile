@@ -22,13 +22,13 @@ RUN \
     libffi-dev=3.2.1-r6 \
     libressl-dev=3.0.2-r0 \
     make=4.2.1-r2 \
-    python2-dev=2.7.16-r3 \
+    python2-dev=2.7.18-r0 \
   \
   && apk add --no-cache \
     git=2.24.3-r0 \
     libressl=3.0.2-r0 \
     py2-pip=18.1-r0 \
-    python2=2.7.16-r3 \
+    python2=2.7.18-r0 \
     wget=1.20.3-r0 \
   \
   && pip install --no-cache-dir -U -r /tmp/requirements.txt \
