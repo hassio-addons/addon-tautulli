@@ -33,148 +33,7 @@ All statistics are presented in a nice and clean interface
 with many tables and graphs,
 which makes it easy to brag about your server to everyone else.
 
-## Installation
-
-The installation of this add-on is pretty straightforward and not different in
-comparison to installing any other Home Assistant add-on.
-
-1. Search for the "Tautulli" add-on in the Supervisor add-on store
-   and install it.
-1. Start the "Tautulli" add-on
-1. Check the logs of the "Tautulli" add-on to see if everything went well.
-1. Click "OPEN WEB UI" to open the Tautulli website and follow the wizard.
-
-**NOTE**: Starting the add-on might take a couple of minutes (especially the
-first time starting the add-on).
-
-## Configuration
-
-**Note**: _Remember to restart the add-on when the configuration is changed._
-
-Example add-on configuration:
-
-```yaml
-log_level: info
-username: MarryPoppins
-password: Supercalifragilisticexpialidocious
-ssl: true
-certfile: fullchain.pem
-keyfile: privkey.pem
-```
-
-**Note**: _This is just an example, don't copy and past it! Create your own!_
-
-### Option: `log_level`
-
-The `log_level` option controls the level of log output by the addon and can
-be changed to be more or less verbose, which might be useful when you are
-dealing with an unknown issue. Possible values are:
-
-- `trace`: Show every detail, like all called internal functions.
-- `debug`: Shows detailed debug information.
-- `info`: Normal (usually) interesting events.
-- `warning`: Exceptional occurrences that are not errors.
-- `error`:  Runtime errors that do not require immediate action.
-- `fatal`: Something went terribly wrong. Add-on becomes unusable.
-
-Please note that each level automatically includes log messages from a
-more severe level, e.g., `debug` also shows `info` messages. By default,
-the `log_level` is set to `info`, which is the recommended setting unless
-you are troubleshooting.
-
-### Option: `username`
-
-Username for authenticating with the Tautulli interface.
-
-Setting a username/password can be added as an extra line of defense,
-to prevent users from using your installation for themselves.
-
-This option is HIGHLY recommended in case you expose this add-on to the outside
-world.
-
-**Note**: _This option support secrets, e.g., `!secret tautulli_username`._
-
-### Option: `password`
-
-Password for authenticating with Tautulli interface.
-
-**Note**: _This option support secrets, e.g., `!secret tautulli_password`._
-
-### Option: `ssl`
-
-Enables/Disables SSL (HTTPS) on the web interface of Tautulli. Set it `true`
-to enable it, `false` otherwise.
-
-### Option: `certfile`
-
-The certificate file to use for SSL.
-
-**Note**: _The file MUST be stored in `/ssl/`, which is the default_
-
-### Option: `keyfile`
-
-The private key file to use for SSL.
-
-**Note**: _The file MUST be stored in `/ssl/`, which is the default_
-
-### Option: `i_like_to_be_pwned`
-
-Adding this option to the add-on configuration allows to you bypass the
-HaveIBeenPwned password requirement by setting it to `true`.
-
-**Note**: _We STRONGLY suggest picking a stronger/safer password instead of
-using this option! USE AT YOUR OWN RISK!_
-
-### Option: `leave_front_door_open`
-
-Adding this option to the add-on configuration allows you to disable
-authentication on the add-on by setting it to `true` and leaving the
-username and password empty.
-
-**Note**: _We STRONGLY suggest, not to use this, even if this add-on is
-only exposed to your internal network. USE AT YOUR OWN RISK!_
-
-## Embedding into Home Assistant
-
-It is possible to embed Tautulli directly into Home Assistant, allowing you to
-access your Tautulli through the Home Assistant frontend.
-
-Home Assistant provides the `panel_iframe` integration, for these purposes.
-
-Example configuration:
-
-```yaml
-panel_iframe:
-  tautulli:
-    title: Tautulli
-    icon: mdi:filmstrip
-    url: http://addres.to.your.home.assistant:8181
-```
-
-## Use an existing database
-
-**NB!: This is considered advanced usage.**
-
-If you want to import an existing Tautulli database to this addon, you first
-need to extract the `tautulli.db` file from your existing installation.
-Place this file in this directory `/share/tautulli`, you can use samba,
-Cloud9 or any other method to move it there.
-You need to restart the add-on for it to start using this database.
-_if the directory `/share/tautulli` does not exist you need to create it._
-
-## Changelog & Releases
-
-This repository keeps a change log using [GitHub's releases][releases]
-functionality. The format of the log is based on
-[Keep a Changelog][keepchangelog].
-
-Releases are based on [Semantic Versioning][semver], and use the format
-of ``MAJOR.MINOR.PATCH``. In a nutshell, the version will be incremented
-based on the following:
-
-- ``MAJOR``: Incompatible or major changes.
-- ``MINOR``: Backwards-compatible new features and enhancements.
-- ``PATCH``: Backwards-compatible bugfixes and package updates.
+[:books: Read the full add-on documentation][docs]
 
 ## Support
 
@@ -251,23 +110,19 @@ SOFTWARE.
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
-[dockerhub]: https://hub.docker.com/r/hassioaddons/tautulli
+[docs]: https://github.com/hassio-addons/addon-tautulli/blob/master/tautulli/DOCS.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-tautulli/68745?u=ludeeus
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-tautulli/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-tautulli/pipelines
-[home-assistant]: https://home-assistant.io
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-tautulli/issues
-[keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-tautulli.svg
 [ludeeus]: https://github.com/ludeeus
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
-[microbadger]: https://microbadger.com/images/hassioaddons/tautulli
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-tautulli.svg
 [releases]: https://github.com/hassio-addons/addon-tautulli/releases
 [repository]: https://github.com/hassio-addons/repository
 [screenshot]: https://github.com/hassio-addons/addon-tautulli/raw/master/images/screenshot.png
-[semver]: http://semver.org/spec/v2.0.0.htm
