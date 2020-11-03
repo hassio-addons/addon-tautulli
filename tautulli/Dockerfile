@@ -29,7 +29,7 @@ RUN \
     libressl=3.0.2-r0 \
     py2-pip=18.1-r0 \
     python2=2.7.18-r0 \
-    wget=1.20.3-r0 \
+    wget=1.20.3-r1 \
   \
   && pip install --no-cache-dir -U -r /tmp/requirements.txt \
   \
