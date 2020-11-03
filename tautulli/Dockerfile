@@ -20,7 +20,7 @@ RUN \
     g++=9.3.0-r2 \
     gcc=9.3.0-r2 \
     libffi-dev=3.3-r2 \
-    libressl-dev=3.0.2-r0 \
+    libressl-dev=3.1.2-r0 \
     make=4.2.1-r2 \
     python2-dev=2.7.18-r0 \
   \
