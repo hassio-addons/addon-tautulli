@@ -17,7 +17,7 @@ COPY requirements.txt /tmp/
 # Setup base
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    g++=9.2.0-r4 \
+    g++=9.3.0-r2 \
     gcc=9.2.0-r4 \
     libffi-dev=3.2.1-r6 \
     libressl-dev=3.0.2-r0 \
