@@ -3,7 +3,7 @@ ARG BUILD_FROM=hassioaddons/base:8.0.5
 FROM ${BUILD_FROM}
 
 # Set env
-ENV TAUTULLI_VERSION 'v2.2.4'
+ENV TAUTULLI_VERSION 'v2.6.0'
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -15,6 +15,7 @@ WORKDIR /opt
 COPY requirements.txt /tmp/
 
 # Setup base
+ARG BUILD_ARCH=amd64
 RUN \
   apk add --no-cache --virtual .build-dependencies \
     g++=9.3.0-r2 \
@@ -22,31 +23,36 @@ RUN \
     libffi-dev=3.3-r2 \
     libressl-dev=3.1.2-r0 \
     make=4.3-r0 \
-    python2-dev=2.7.18-r0 \
+    python3-dev=3.8.5-r0 \
   \
   && apk add --no-cache \
     git=2.26.2-r0 \
     libressl=3.0.2-r0 \
-    py2-pip=18.1-r0 \
-    python2=2.7.18-r0 \
+    py3-pip=20.1.1-r0 \
+    python3=3.8.5-r0 \
     wget=1.20.3-r1 \
   \
-  && pip install --no-cache-dir -U -r /tmp/requirements.txt \
+  && pip install \
+      --no-cache-dir \
+      --prefer-binary \
+      --find-links "https://wheels.home-assistant.io/alpine-3.12/${BUILD_ARCH}/" \
+      -r /tmp/requirements.txt \
   \
-  && git clone --branch $TAUTULLI_VERSION --depth=1 \
+  && git clone --branch "${TAUTULLI_VERSION}" --depth=1 \
     https://github.com/Tautulli/Tautulli.git /opt \
-  && apk del --no-cache --purge .build-dependencies \
   \
-  && rm -f -r /tmp/* \
-  && find /usr/lib/python2.7/ -type d -name tests -depth -exec rm -rf {} \; \
-  && find /usr/lib/python2.7/ -type d -name test -depth -exec rm -rf {} \; \
-  && find /usr/lib/python2.7/ -name __pycache__ -depth -exec rm -rf {} \;
+  && find /usr/local \
+      \( -type d -a -name test -o -name tests -o -name '__pycache__' \) \
+      -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
+      -exec rm -rf '{}' + \
+  \
+  && apk del --no-cache --purge .build-dependencies \
+  && rm -f -r /tmp/*
 
 # Copy root filesystem
 COPY rootfs /
 
 # Build arguments
-ARG BUILD_ARCH
 ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
