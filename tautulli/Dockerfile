@@ -28,6 +28,7 @@ RUN \
   && apk add --no-cache \
     git=2.26.2-r0 \
     libressl=3.1.2-r0 \
+    patch=2.7.6-r6 \
     py3-pip=20.1.1-r0 \
     python3=3.8.5-r0 \
     wget=1.20.3-r1 \
