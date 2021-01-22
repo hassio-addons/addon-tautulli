@@ -10,7 +10,7 @@
 ![Supports amd64 Architecture][amd64-shield]
 ![Supports i386 Architecture][i386-shield]
 
-[![GitLab CI][gitlabci-shield]][gitlabci]
+[![Github Actions][github-actions-shield]][github-actions]
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
@@ -105,16 +105,16 @@ SOFTWARE.
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
 [buymeacoffee]: https://www.buymeacoffee.com/ludeeus
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-tautulli.svg
-[commits]: https://github.com/hassio-addons/addon-tautulli/commits/master
+[commits]: https://github.com/hassio-addons/addon-tautulli/commits/main
 [contributors]: https://github.com/hassio-addons/addon-tautulli/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
-[docs]: https://github.com/hassio-addons/addon-tautulli/blob/master/tautulli/DOCS.md
+[docs]: https://github.com/hassio-addons/addon-tautulli/blob/main/tautulli/DOCS.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-tautulli/68745?u=ludeeus
-[gitlabci-shield]: https://gitlab.com/hassio-addons/addon-tautulli/badges/master/pipeline.svg
-[gitlabci]: https://gitlab.com/hassio-addons/addon-tautulli/pipelines
+[github-actions-shield]: https://github.com/hassio-addons/addon-tautulli/workflows/CI/badge.svg
+[github-actions]: https://github.com/hassio-addons/addon-tautulli/actions
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-tautulli/issues
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-tautulli.svg
@@ -125,4 +125,4 @@ SOFTWARE.
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-tautulli.svg
 [releases]: https://github.com/hassio-addons/addon-tautulli/releases
 [repository]: https://github.com/hassio-addons/repository
-[screenshot]: https://github.com/hassio-addons/addon-tautulli/raw/master/images/screenshot.png
+[screenshot]: https://github.com/hassio-addons/addon-tautulli/raw/main/images/screenshot.png
