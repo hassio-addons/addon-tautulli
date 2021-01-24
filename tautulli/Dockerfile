@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:8.0.5
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:9.1.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -18,20 +18,20 @@ COPY requirements.txt /tmp/
 ARG BUILD_ARCH=amd64
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    g++=9.3.0-r2 \
-    gcc=9.3.0-r2 \
+    g++=10.2.1_pre1-r3 \
+    gcc=10.2.1_pre1-r3 \
     libffi-dev=3.3-r2 \
-    libressl-dev=3.1.2-r0 \
+    libressl-dev=3.1.5-r0 \
     make=4.3-r0 \
-    python3-dev=3.8.5-r0 \
+    python3-dev=3.8.7-r0 \
   \
   && apk add --no-cache \
-    git=2.26.2-r0 \
-    libressl=3.1.2-r0 \
+    git=2.30.0-r0 \
+    libressl=3.1.5-r0 \
     patch=2.7.6-r6 \
-    py3-pip=20.1.1-r0 \
-    python3=3.8.5-r0 \
-    wget=1.20.3-r1 \
+    py3-pip=20.3.3-r0 \
+    python3=3.8.7-r0 \
+    wget=1.21.1-r1 \
   \
   && pip install \
       --no-cache-dir \
