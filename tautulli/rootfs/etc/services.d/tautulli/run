@@ -5,7 +5,7 @@
 # ==============================================================================
 bashio::log.info "Starting Tautulli..."
 exec \
-  python /opt/Tautulli.py \
+  python3 /opt/Tautulli.py \
     --datadir /data \
     --nolaunch \
     -p 8181
