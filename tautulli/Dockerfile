@@ -29,7 +29,7 @@ RUN \
     git=2.30.0-r0 \
     libressl=3.1.5-r0 \
     patch=2.7.6-r6 \
-    py3-pip=20.3.3-r0 \
+    py3-pip=20.3.4-r0 \
     python3=3.8.7-r0 \
     wget=1.21.1-r1 \
   \
