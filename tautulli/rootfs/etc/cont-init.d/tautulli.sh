@@ -14,12 +14,6 @@ if ! bashio::config.true 'leave_front_door_open'; then
     bashio::config.require.password;
 fi
 
-# Require a secure password
-if bashio::config.has_value 'password' \
-    && ! bashio::config.true 'i_like_to_be_pwned'; then
-    bashio::config.require.safe_password
-fi
-
 # Check SSL cerrificate
 bashio::config.require.ssl
 

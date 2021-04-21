@@ -29,7 +29,6 @@
     "ssl": "bool",
     "certfile": "str",
     "keyfile": "str",
-    "i_like_to_be_pwned": "bool?",
     "leave_front_door_open": "bool?"
   }
 }
