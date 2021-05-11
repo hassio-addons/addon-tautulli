@@ -23,14 +23,14 @@ RUN \
     libffi-dev=3.3-r2 \
     libressl-dev=3.1.5-r0 \
     make=4.3-r0 \
-    python3-dev=3.8.8-r0 \
+    python3-dev=3.8.10-r0 \
   \
   && apk add --no-cache \
     git=2.30.2-r0 \
     libressl=3.1.5-r0 \
     patch=2.7.6-r6 \
     py3-pip=20.3.4-r0 \
-    python3=3.8.8-r0 \
+    python3=3.8.10-r0 \
     wget=1.21.1-r1 \
   \
   && pip install \
