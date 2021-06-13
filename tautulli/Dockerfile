@@ -36,7 +36,7 @@ RUN \
   && pip install \
       --no-cache-dir \
       --prefer-binary \
-      --find-links "https://wheels.home-assistant.io/alpine-3.12/${BUILD_ARCH}/" \
+      --find-links "https://wheels.home-assistant.io/alpine-3.13/${BUILD_ARCH}/" \
       -r /tmp/requirements.txt \
   \
   && git clone --branch "${TAUTULLI_VERSION}" --depth=1 \
