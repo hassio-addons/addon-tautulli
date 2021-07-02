@@ -29,6 +29,7 @@ RUN \
     git=2.32.0-r0 \
     openssl=1.1.1k-r0 \
     patch=2.7.6-r7 \
+    py3-cryptography=3.3.2-r1 \
     py3-pip=20.3.4-r1 \
     python3=3.9.5-r1 \
     wget=1.21.1-r1 \
