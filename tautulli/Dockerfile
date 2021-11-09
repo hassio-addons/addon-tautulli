@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:10.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:10.1.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -21,13 +21,13 @@ RUN \
     g++=10.3.1_git20210424-r2 \
     gcc=10.3.1_git20210424-r2 \
     libffi-dev=3.3-r2 \
-    openssl-dev=1.1.1k-r0 \
+    openssl-dev=1.1.1l-r0 \
     make=4.3-r0 \
     python3-dev=3.9.5-r1 \
   \
   && apk add --no-cache \
     git=2.32.0-r0 \
-    openssl=1.1.1k-r0 \
+    openssl=1.1.1l-r0 \
     patch=2.7.6-r7 \
     py3-cryptography=3.3.2-r1 \
     py3-pip=20.3.4-r1 \
