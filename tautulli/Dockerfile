@@ -23,7 +23,7 @@ RUN \
     libffi-dev=3.3-r2 \
     openssl-dev=1.1.1l-r0 \
     make=4.3-r0 \
-    python3-dev=3.9.5-r1 \
+    python3-dev=3.9.5-r2 \
   \
   && apk add --no-cache \
     git=2.32.0-r0 \
@@ -31,13 +31,13 @@ RUN \
     patch=2.7.6-r7 \
     py3-cryptography=3.3.2-r1 \
     py3-pip=20.3.4-r1 \
-    python3=3.9.5-r1 \
+    python3=3.9.5-r2 \
     wget=1.21.1-r1 \
   \
   && pip install \
       --no-cache-dir \
       --prefer-binary \
-      --find-links "https://wheels.home-assistant.io/alpine-3.14/${BUILD_ARCH}/" \
+      --find-links "https://wheels.home-assistant.io/alpine-3.15/${BUILD_ARCH}/" \
       -r /tmp/requirements.txt \
   \
   && git clone --branch "${TAUTULLI_VERSION}" --depth=1 \
