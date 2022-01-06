@@ -3,7 +3,7 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:11.0.0
 FROM ${BUILD_FROM}
 
 # Set env
-ENV TAUTULLI_VERSION 'v2.8.0'
+ENV TAUTULLI_VERSION 'v2.8.1'
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
