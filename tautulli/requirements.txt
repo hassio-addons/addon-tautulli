@@ -1,4 +1,4 @@
 plexapi==4.8.0
-pycryptodomex==3.11.0
+pycryptodomex==3.13.0
 crudini==0.9.3
 pyOpenSSL==21.0.0
