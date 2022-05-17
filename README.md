@@ -17,8 +17,6 @@
 [![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
 
-[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
-
 Monitor and get statistics from your Plex server.
 
 ![Screenshot][screenshot]
@@ -78,7 +76,7 @@ our [GitHub Repository][repository].
 
 MIT License
 
-Copyright (c) 2018-2021 Joakim Sørensen
+Copyright (c) 2018-2021 Home Assistant Community Add-ons project
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -102,8 +100,6 @@ SOFTWARE.
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
-[buymeacoffee]: https://www.buymeacoffee.com/ludeeus
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-tautulli.svg
 [commits]: https://github.com/hassio-addons/addon-tautulli/commits/main
 [contributors]: https://github.com/hassio-addons/addon-tautulli/graphs/contributors
@@ -112,7 +108,7 @@ SOFTWARE.
 [discord]: https://discord.me/hassioaddons
 [docs]: https://github.com/hassio-addons/addon-tautulli/blob/main/tautulli/DOCS.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-tautulli/68745?u=ludeeus
+[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-tautulli/68745
 [github-actions-shield]: https://github.com/hassio-addons/addon-tautulli/workflows/CI/badge.svg
 [github-actions]: https://github.com/hassio-addons/addon-tautulli/actions
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
