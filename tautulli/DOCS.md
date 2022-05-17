@@ -164,7 +164,8 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2018-2021 Joakim Sørensen
+Copyright (c) 2018-2019 Joakim Sørensen
+Copyright (c) 2019-2022 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -187,7 +188,7 @@ SOFTWARE.
 [contributors]: https://github.com/hassio-addons/addon-tautulli/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
-[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-tautulli/68745?u=ludeeus
+[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-tautulli/68745
 [issue]: https://github.com/hassio-addons/addon-tautulli/issues
 [ludeeus]: https://github.com/ludeeus
 [reddit]: https://reddit.com/r/homeassistant
