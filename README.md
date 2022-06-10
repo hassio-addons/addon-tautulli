@@ -76,7 +76,7 @@ our [GitHub Repository][repository].
 
 MIT License
 
-Copyright (c) 2018-2019 Joakim Sørensen
+Copyright (c) 2018-2019 Joakim Sørensen  
 Copyright (c) 2019-2022 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -116,7 +116,7 @@ SOFTWARE.
 [issue]: https://github.com/hassio-addons/addon-tautulli/issues
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-tautulli.svg
 [ludeeus]: https://github.com/ludeeus
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2021.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-tautulli.svg
