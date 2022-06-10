@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:11.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -18,26 +18,26 @@ COPY requirements.txt /tmp/
 ARG BUILD_ARCH=amd64
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    g++=10.3.1_git20211027-r0 \
-    gcc=10.3.1_git20211027-r0 \
+    g++=11.2.1_git20220219-r2 \
+    gcc=11.2.1_git20220219-r2 \
     libffi-dev=3.4.2-r1 \
-    openssl-dev=1.1.1l-r7 \
+    openssl-dev=1.1.1o-r0 \
     make=4.3-r0 \
-    python3-dev=3.9.7-r4 \
+    python3-dev=3.10.4-r \
   \
   && apk add --no-cache \
-    git=2.34.1-r0 \
-    openssl=1.1.1l-r7 \
+    git=2.36.1-r0 \
+    openssl=1.1.1o-r0 \
     patch=2.7.6-r7 \
-    py3-cryptography=3.3.2-r3 \
-    py3-pip=20.3.4-r1 \
-    python3=3.9.7-r4 \
-    wget=1.21.2-r2 \
+    py3-cryptography=3.4.8-r1 \
+    py3-pip=22.1.1-r0 \
+    python3=3.10.4-r \
+    wget=1.21.3-r0 \
   \
   && pip install \
       --no-cache-dir \
       --prefer-binary \
-      --find-links "https://wheels.home-assistant.io/alpine-3.15/${BUILD_ARCH}/" \
+      --find-links "https://wheels.home-assistant.io/alpine-3.16/${BUILD_ARCH}/" \
       -r /tmp/requirements.txt \
   \
   && git clone --branch "${TAUTULLI_VERSION}" --depth=1 \

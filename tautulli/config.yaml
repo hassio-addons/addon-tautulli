@@ -11,6 +11,7 @@ arch:
   - armhf
   - armv7
   - i386
+init: false
 hassio_api: true
 ports:
   8181/tcp: 8181
