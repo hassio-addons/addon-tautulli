@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:11.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -17,39 +17,39 @@ COPY requirements.txt /tmp/
 # Setup base
 ARG BUILD_ARCH=amd64
 RUN \
-  apk add --no-cache --virtual .build-dependencies \
-    g++=10.3.1_git20211027-r0 \
-    gcc=10.3.1_git20211027-r0 \
-    libffi-dev=3.4.2-r1 \
-    openssl-dev=1.1.1l-r7 \
-    make=4.3-r0 \
-    python3-dev=3.9.7-r4 \
-  \
-  && apk add --no-cache \
-    git=2.34.1-r0 \
-    openssl=1.1.1l-r7 \
-    patch=2.7.6-r7 \
-    py3-cryptography=3.3.2-r3 \
-    py3-pip=20.3.4-r1 \
-    python3=3.9.7-r4 \
-    wget=1.21.2-r2 \
+  apt-get update \
+  && apt-get install -y --no-install-recommends \
+    build-essential=12.9 \
+    git=1:2.30.2-1 \
+    python3-dev=3.9.2-3 \
+    python3-pip=20.3.4-4+deb11u1 \
+    python3=3.9.2-3\
   \
   && pip install \
-      --no-cache-dir \
-      --prefer-binary \
-      --find-links "https://wheels.home-assistant.io/alpine-3.15/${BUILD_ARCH}/" \
-      -r /tmp/requirements.txt \
+    --no-cache-dir \
+    --prefer-binary \
+    --extra-index-url "https://www.piwheels.org/simple" \
+    -r /tmp/requirements.txt \
   \
   && git clone --branch "${TAUTULLI_VERSION}" --depth=1 \
     https://github.com/Tautulli/Tautulli.git /opt \
   \
   && find /usr/local \
-      \( -type d -a -name test -o -name tests -o -name '__pycache__' \) \
-      -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
-      -exec rm -rf '{}' + \
+    \( -type d -a -name test -o -name tests -o -name '__pycache__' \) \
+    -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
+    -exec rm -rf '{}' + \
   \
-  && apk del --no-cache --purge .build-dependencies \
-  && rm -f -r /tmp/*
+  && apt-get purge -y --auto-remove \
+    build-essential \
+    git \
+    python3-dev \
+    python3-pip \
+  \
+  && rm -fr \
+    /opt/{.git,.github,init-scripts} \
+    /tmp/* \
+    /var/{cache,log}/* \
+    /var/lib/apt/lists/*
 
 # Copy root filesystem
 COPY rootfs /
