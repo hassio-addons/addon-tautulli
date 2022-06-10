@@ -19,10 +19,11 @@ ARG BUILD_ARCH=amd64
 RUN \
   apt-get update \
   && apt-get install -y --no-install-recommends \
-    python3=3.9.2-3\
+    build-essential=12.9 \
+    git=1:2.30.2-1 \
     python3-dev=3.9.2-3 \
     python3-pip=20.3.4-4+deb11u1 \
-    git=1:2.30.2-1 \
+    python3=3.9.2-3\
   \
   && pip install \
     --no-cache-dir \
@@ -39,9 +40,10 @@ RUN \
     -exec rm -rf '{}' + \
   \
   && apt-get purge -y --auto-remove \
+    build-essential \
+    git \
     python3-dev \
     python3-pip \
-    git \
   \
   && rm -fr \
     /opt/{.git,.github,init-scripts} \
