@@ -18,19 +18,7 @@ ports:
 ports_description:
   8181/tcp: Tautulli web interface
 map:
-  - ssl
   - share:rw
-options:
-  username: ""
-  password: ""
-  ssl: true
-  certfile: fullchain.pem
-  keyfile: privkey.pem
+  - backup:rw
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
-  username: str
-  password: password
-  ssl: bool
-  certfile: str
-  keyfile: str
-  leave_front_door_open: bool?
