@@ -3,7 +3,7 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.1.3
 FROM ${BUILD_FROM}
 
 # Set env
-ENV TAUTULLI_VERSION 'v2.10.4'
+ENV TAUTULLI_VERSION 'v2.10.5'
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
