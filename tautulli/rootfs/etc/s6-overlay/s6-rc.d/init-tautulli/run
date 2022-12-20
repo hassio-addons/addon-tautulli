@@ -1,0 +1,52 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Community Add-on: Tautulli
+# Preparing configuration for Tautulli
+# ==============================================================================
+readonly ADDON=/data/addon.ini
+readonly CONFIG=/data/config.ini
+
+# Check SSL cerrificate
+bashio::config.require.ssl
+
+# If config.ini does not exist, create it.
+if ! bashio::fs.file_exists "$CONFIG"; then
+    bashio::log.info "Creating default configuration..."
+    crudini --set "$CONFIG" Advanced system_analytics 0
+    crudini --set "$CONFIG" General backup_dir "/backup/tautulli"
+    crudini --set "$CONFIG" General first_run_complete 0
+    crudini --set "$CONFIG" General update_show_changelog 0
+    crudini --set "$ADDON" Addon version "$TAUTULLI_VERSION"
+fi
+
+# Create backup directory
+mkdir -p /backup/tautulli
+
+bashio::log.info "Updating running configuration..."
+
+# Temporrary changing config.ini to be valid during additions
+## This has to be done because Tautulli added a ini header with [[header]]
+sed -i "s/\\[\\[get_file_sizes_hold\\]\\]/\\[get_file_sizes_hold\\]/" "$CONFIG"
+
+# Set spesific config if an upgrade
+if ! bashio::fs.file_exists "/data/addon.ini"; then
+    crudini --set "$ADDON" Addon version "0"
+fi
+CURRENT_VERSION=$(crudini --get "$ADDON" Addon version)
+if [ "$CURRENT_VERSION" != "$TAUTULLI_VERSION" ]; then
+    bashio::log.debug "This is an upgrade..."
+    crudini --set "$CONFIG" General update_show_changelog 1
+else
+    bashio::log.debug "This is not an upgrade..."
+    crudini --set "$CONFIG" General update_show_changelog 0
+fi
+
+# Ensure config
+crudini --set "$ADDON" Addon version "$TAUTULLI_VERSION"
+crudini --set "$CONFIG" General check_github 0
+crudini --set "$CONFIG" General check_github_on_startup 0
+
+# Changing config.ini back.
+## This has to be done because Tautulli added a ini header with [[header]]
+sed -i "s/\\[get_file_sizes_hold\\]/\\[\\[get_file_sizes_hold\\]\\]/" "$CONFIG"
