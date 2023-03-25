@@ -18,7 +18,7 @@ RUN \
   apt-get update \
   && apt-get install -y --no-install-recommends \
     build-essential=12.9 \
-    git=1:2.30.2-1 \
+    git=1:2.30.2-1+deb11u2 \
     python3-dev=3.9.2-3 \
     python3-pip=20.3.4-4+deb11u1 \
     python3=3.9.2-3\
