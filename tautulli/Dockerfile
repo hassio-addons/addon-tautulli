@@ -2,9 +2,6 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.2.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-# Set env
-ENV TAUTULLI_VERSION 'v2.12.2'
-
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -16,6 +13,7 @@ COPY requirements.txt /tmp/
 
 # Setup base
 ARG BUILD_ARCH=amd64
+ARG TAUTULLI_VERSION "v2.12.2"
 RUN \
   apt-get update \
   && apt-get install -y --no-install-recommends \
