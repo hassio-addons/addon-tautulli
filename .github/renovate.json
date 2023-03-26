@@ -28,7 +28,7 @@
     {
       "fileMatch": ["/Dockerfile$"],
       "matchStrings": [
-        "ARG TAUTULLI_VERSION=[\"']?(?<currentValue>.+?)[\"']?\\s+"
+        "ENV TAUTULLI_VERSION=[\"']?(?<currentValue>.+?)[\"']?\\s+"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "Tautulli/Tautulli"
