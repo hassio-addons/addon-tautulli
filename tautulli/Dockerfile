@@ -13,7 +13,7 @@ COPY requirements.txt /tmp/
 
 # Setup base
 ARG BUILD_ARCH=amd64
-ENV TAUTULLI_VERSION="v2.12.2"
+ENV TAUTULLI_VERSION="v2.12.3"
 RUN \
   apt-get update \
   && apt-get install -y --no-install-recommends \
