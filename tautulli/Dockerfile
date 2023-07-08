@@ -2,7 +2,9 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-ENV PIP_BREAK_SYSTEM_PACKAGES=1
+ENV \
+  PIP_BREAK_SYSTEM_PACKAGES=1 \
+  TAUTULLI_VERSION="v2.12.4"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -15,7 +17,6 @@ COPY requirements.txt /tmp/
 
 # Setup base
 ARG BUILD_ARCH=amd64
-ARG TAUTULLI_VERSION="v2.12.4"
 RUN \
   apt-get update \
   && apt-get install -y --no-install-recommends \
