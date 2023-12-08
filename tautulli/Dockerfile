@@ -4,7 +4,7 @@ FROM ${BUILD_FROM}
 
 ENV \
   PIP_BREAK_SYSTEM_PACKAGES=1 \
-  TAUTULLI_VERSION="v2.12.4"
+  TAUTULLI_VERSION="v2.13.4"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
