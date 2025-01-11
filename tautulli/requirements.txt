@@ -1,4 +1,4 @@
 crudini==0.9.5
-plexapi==4.16.0
+plexapi==4.16.1
 pycryptodomex==3.21.0
 setuptools==75.7.0
