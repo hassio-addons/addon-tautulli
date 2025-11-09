@@ -8,7 +8,6 @@ webui: "[PROTO:ssl]://[HOST]:[PORT:8181]"
 arch:
   - aarch64
   - amd64
-  - armv7
 init: false
 hassio_api: true
 ports:
