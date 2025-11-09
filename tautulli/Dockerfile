@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.8.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:8.1.4
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -20,11 +20,11 @@ ARG BUILD_ARCH=amd64
 RUN \
   apt-get update \
   && apt-get install -y --no-install-recommends \
-    build-essential=12.9 \
-    git=1:2.39.5-0+deb12u2 \
-    python3-dev=3.11.2-1+b1 \
-    python3-pip=23.0.1+dfsg-1 \
-    python3=3.11.2-1+b1 \
+    build-essential=12.12 \
+    git=1:2.47.3-0+deb13u1 \
+    python3-dev=3.13.5-1 \
+    python3-pip=25.1.1+dfsg-1 \
+    python3=3.13.5-1 \
   \
   && pip install \
     --no-cache-dir \
